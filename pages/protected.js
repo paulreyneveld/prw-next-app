@@ -1,5 +1,6 @@
+import withAuth from '../HOC/withAuth'
 
-const protected = () => {
+const Protected = () => {
     return (
         <>
         <p>Protected route</p>
@@ -7,4 +8,4 @@ const protected = () => {
     )
 }
 
-default export protected;
+export default withAuth(Protected);
