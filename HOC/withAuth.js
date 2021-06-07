@@ -1,27 +1,28 @@
-// HOC/withAuth.jsx
-import { useEffect, useState } from "react";
-import useSWR from 'swr'
+// // HOC/withAuth.jsx
+// import { useEffect, useState } from "react";
+// import useSWR from 'swr'
 
-const withAuth = (WrappedComponent) => {
-  return (props) => {
-    const [verified, setVerified] = useState(false)
+// const withAuth = (WrappedComponent) => {
 
-    useEffect(async () => {
-        const {data, revalidate} = useSWR('/api/me', async function(args) {
-            const res = await fetch(args);
-            return res.json();
-        });
-        if (data.email) {
-            setVerified(true);
-        }
-    }
+//     const [verified, setVerified] = useState(false)
 
-    if (verified) {
-      return <WrappedComponent {...props} />;
-    } else {
-      return null;
-    }
-  };
-};
+//     useEffect(async () => {
+//         const {data, revalidate} = useSWR('/api/me', async function(args) {
+//             const res = await fetch(args);
+//             return res.json();
+//         });
+//         if (data.email) {
+//             setVerified(true);
+//         }
+//     })
 
-export default withAuth;
+//     return (props) => {
+//         if (verified) {
+//         return <WrappedComponent {...props} />;
+//         } else {
+//         return null;
+//         }
+//   };
+// };
+
+// export default withAuth;
