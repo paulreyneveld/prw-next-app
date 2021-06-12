@@ -29,7 +29,8 @@ export default (req, res) => {
     try {
       assert.notEqual(null, req.body.email, 'Email required');
       assert.notEqual(null, req.body.password, 'Password required');
-    } catch (bodyError) {
+    }
+    catch (bodyError) {
       res.status(403).send(bodyError.message);
     }
 

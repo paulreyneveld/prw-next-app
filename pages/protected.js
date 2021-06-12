@@ -4,8 +4,9 @@ import useSWR from 'swr';
 
 const Protected = () => {
 
-    const [data, setData] = useState(null);
+    const [apiData, setApiData] = useState(null);
     useEffect(() => {
+        
 
     }, []);
 
