@@ -4,6 +4,11 @@ import useSWR from 'swr';
 
 const Protected = () => {
 
+    const [data, setData] = useState(null);
+    useEffect(() => {
+
+    }, []);
+
     const {data, error} = useSWR('/api/me', async function(args) {
         const res = await fetch(args);
         return res.json();
