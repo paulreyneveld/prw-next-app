@@ -1,7 +1,14 @@
-function index() {
-    return (
-        <p>Hello world</p>
-    )
-}
+// pages/index.js
+import Head from 'next/head';
 
-export default index
+const Home = () => {
+  return (
+    <div>
+      <Head>
+        <title>Blog App</title>
+      </Head>
+      <h1>Blog</h1>
+    </div>
+  )
+}
+export default Home;
