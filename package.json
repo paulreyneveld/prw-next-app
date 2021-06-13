@@ -10,6 +10,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "bcrypt": "^5.0.1",
+    "firebase": "^8.6.7",
     "isomorphic-unfetch": "^3.1.0",
     "js-cookie": "^2.2.1",
     "mongodb": "^3.6.9",
