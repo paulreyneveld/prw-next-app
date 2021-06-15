@@ -1,6 +1,7 @@
 // components/CreatePost.js
 import React, { useState } from 'react';
 import fire from '../config/fire-config';
+
 const CreatePost = () => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
