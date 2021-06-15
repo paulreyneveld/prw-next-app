@@ -16,6 +16,7 @@ const Home = () => {
         setBlogs(blogs);
       });
   }, []);
+  
   return (
     <div>
       <Head>
