@@ -1,5 +1,6 @@
 // config/fire-config.js
 import firebase from 'firebase';
+
 const firebaseConfig = {
   apiKey: process.env.API_KEY,
   authDomain: process.env.AUTH_DOMAIN,
