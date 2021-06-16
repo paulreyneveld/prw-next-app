@@ -3,6 +3,7 @@ import fire from '../../config/fire-config';
 import Link from 'next/link'
 const Blog = (props) => {
   const [blog, setBlog] = useState(null);
+
   useEffect(() => {
     fire.firestore()
       .collection('blog')
@@ -12,11 +13,13 @@ const Blog = (props) => {
         setBlog(result.data())
       })
   }, []);
+
   if(!blog){
     return(
       <h2>Loading...</h2>
     )
   }
+
   return (
     <div>
       <h2>{blog.title}</h2>
@@ -31,7 +34,8 @@ const Blog = (props) => {
 }
 
 export const getServerSideProps = async ({ query }) => {
-    const content = {}
+    const content = {};
+
     await fire.firestore()
       .collection('blog')
       .doc(query.id)
@@ -40,6 +44,7 @@ export const getServerSideProps = async ({ query }) => {
         content['title'] = result.data().title;
         content['content'] = result.data().content;
       });
+      
   return {
       props: {
         title: content.title,
