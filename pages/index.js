@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import Head from 'next/head';
 import fire from '../config/fire-config';
 import CreatePost from '../components/CreatePost';
 import Link from 'next/link';
@@ -46,9 +45,6 @@ const Home = () => {
   return (
     
     <div>
-      <Head>
-        <title>Blog App</title>
-      </Head>
     <Layout>
     </Layout>
       <h1>Blog</h1>
