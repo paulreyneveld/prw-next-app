@@ -3,18 +3,22 @@ import Head from 'next/head';
 import fire from '../config/fire-config';
 import CreatePost from '../components/CreatePost';
 import Link from 'next/link';
+
 const Home = () => {
+
   const [blogs, setBlogs] = useState([]);
   const [notification, setNotification] = useState('');
   const [loggedIn, setLoggedIn] = useState(false);
+
   fire.auth()
     .onAuthStateChanged((user) => {
       if (user) {
-        setLoggedIn(true)
+        setLoggedIn(true);
       } else {
-        setLoggedIn(false)
+        setLoggedIn(false);
       }
-    })
+    });
+
   useEffect(() => {
     fire.firestore()
       .collection('blog')
@@ -26,6 +30,7 @@ const Home = () => {
         setBlogs(blogs);
       });
   }, []);
+
   const handleLogout = () => {
     fire.auth()
       .signOut()
@@ -36,6 +41,7 @@ const Home = () => {
         }, 2000)
       });
   }
+
   return (
     <div>
       <Head>
@@ -69,4 +75,5 @@ const Home = () => {
     </div>
   )
 }
+
 export default Home;
