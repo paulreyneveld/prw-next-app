@@ -1,5 +1,6 @@
 import Header from "./Header";
 import NavBar from "./NavBar";
+import Head from "next/head";
 
 const layoutStyle = {
   display: "flex",
@@ -16,6 +17,9 @@ const contentStyle = {
 
 const Layout = props => (
   <div className="Layout" style={layoutStyle}>
+      <Head>
+    <title>PRW</title>
+  </Head>
     <Header />
     <div className="Content" style={contentStyle}>
       {props.children}
