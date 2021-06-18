@@ -3,6 +3,7 @@ import Head from 'next/head';
 import fire from '../config/fire-config';
 import CreatePost from '../components/CreatePost';
 import Link from 'next/link';
+import Layout from '../components/Layout';
 
 const Home = () => {
 
@@ -43,10 +44,13 @@ const Home = () => {
   }
 
   return (
+    
     <div>
       <Head>
         <title>Blog App</title>
       </Head>
+    <Layout>
+    </Layout>
       <h1>Blog</h1>
       {notification}
       {!loggedIn 
