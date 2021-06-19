@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const navBarStyle = {
     backgroundColor: "red",
     color: "white",
@@ -8,6 +10,9 @@ const navBarStyle = {
   const NavBar = () => (
     <div className="NavBar" style={navBarStyle}>
       NAVBAR
+      <Link href="/blog/newblog">
+          <a>Create Post</a>
+      </Link>
     </div>
   );
   
