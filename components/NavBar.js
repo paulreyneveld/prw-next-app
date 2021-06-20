@@ -1,12 +1,12 @@
 import Link from 'next/link';
   
-  const NavBar = () => (
+const NavBar = () => (
     <div className="NavBar">
       NAVBAR
       <Link href="/blog/newblog">
           <a>Create Post</a>
       </Link>
     </div>
-  );
+);
   
-  export default NavBar;
+export default NavBar;
