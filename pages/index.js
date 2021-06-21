@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import fire from '../config/fire-config';
 import CreatePost from '../components/CreatePost';
 import Link from 'next/link';
-import Layout from '../components/Layout';
 
 const Home = () => {
 
@@ -45,7 +44,6 @@ const Home = () => {
   return (
     
     <div>
-    <Layout>
       <h1>Blog</h1>
       {notification}
       {!loggedIn 
@@ -71,8 +69,6 @@ const Home = () => {
         )}
       </ul>
       {loggedIn && <CreatePost />}
-      </Layout>
-
     </div>
 
   )
