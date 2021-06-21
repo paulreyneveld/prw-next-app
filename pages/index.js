@@ -46,7 +46,6 @@ const Home = () => {
     
     <div>
     <Layout>
-    </Layout>
       <h1>Blog</h1>
       {notification}
       {!loggedIn 
@@ -72,7 +71,10 @@ const Home = () => {
         )}
       </ul>
       {loggedIn && <CreatePost />}
+      </Layout>
+
     </div>
+
   )
 }
 
